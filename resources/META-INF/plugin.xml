@@ -1,0 +1,22 @@
+<idea-plugin url="www.jetbrains.com">
+  <id>com.cc.plugins.EditorActions</id>
+  <name>Editor improvement</name>
+  <version>1.0</version>
+  <vendor email="wind9902@163.com" url="https://github.com/chycg/plugins.git">chycg</vendor>
+  <description>Advanced editor shortcuts</description>
+
+  <idea-version since-build="121"/>
+  <depends>com.intellij.modules.lang</depends>
+
+  <actions>
+    <action id="findNext" class="com.cc.FindNextAction" text="findNext" description="find next selection">
+      <add-to-group group-id="EditorPopupMenu.GoTo" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl COMMA"/>
+    </action>
+
+    <action id="findPreAction" class="com.cc.FindPreAction" text="findPre" description="find pre selection">
+      <add-to-group group-id="EditorPopupMenu.GoTo" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl COMMA"/>
+    </action>
+  </actions>
+</idea-plugin>
